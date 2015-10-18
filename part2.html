@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <head>
 <title>Dating Website</title>
+<style>
+	fieldset {background: lightyellow; border:10px solid yellow; margin-bottom: 10px; width:720px}
+	label {width: 180px; ; text-align:right; text-align:top; display:inline-block}
+	textarea {width: 360px; height: 50px}
+	.auto {width: auto}
+	.para {background: darkred; color: white; text-align:top;  display:inline-block; width: 35px}
+	.para1 {background:  blueviolet; color: white; text-align:top; display:inline-block; width: 30px}
+	#sag {background: darkred; color: white}
+</style>
 </head>
 <body>
 	<h1>Please Enter Your Details For Our Dating Website!</h1>
@@ -17,7 +26,7 @@
 		<label for="name">Name:</label>
 		<input type="text" id="name" placeholder="Your full name" name="fullaneme" required><br>
 		<label for="gender">Gender:</label>
-		<input type="radio" id="gender" name="radioItem" required>Male<input type="radio" id="gender" name="radioItem" required>Female<br>
+		<input type="radio" id="gender" name="radioItem" class="auto" required>Male<input type="radio" id="gender" name="radioItem" class="auto" required>Female<br>
 		<label for="age">Age:</label>
 		<input type="number" name="age" id="age" required><br>
 		<label for="dob">Date of birth</label>
@@ -37,9 +46,13 @@
 	<fieldset>
 		<legend>Your indicators</legend>
 		<label for="height">Height:</label>
-		Short<input type="range" min="0" max="100" name="height" id="height"> Tall<br>
+		<span class="para">Short</span>
+		<input type="range" min="0" max="100" name="height" id="height">
+		<span class="para1">Tall</span><br>
 		<label for="salary">Salary:</label>
-		Poor<input type="range" min="0" max="100" name="salary" id="salary">Rich<br>
+		<span class='para'>Poor</span>
+		<input type="range" min="0" max="100" name="salary" id="salary">
+		<span class="para1">Rich</span><br>
 	</fieldset>
 	<fieldset>
 		<label for="email">Email:</label>
@@ -49,7 +62,7 @@
 		<label for="adrs">Address:</label>
 		<textarea name="address" id="adrs"></textarea><br>
 		<label for="contacting">Method to contact you:</label>
-		<input type="checkbox" name="contact" id="contacting">Email<input type="checkbox" name="contact" id="contacting">Whatsapp<input type="checkbox" name="contact" id="contacting">In-app chat
+		<input type="checkbox" name="contact" id="contacting" class="auto">Email<input type="checkbox" name="contact" id="contacting" class="auto">Whatsapp<input type="checkbox" name="contact" id="contacting" class="auto">In-app chat
 	</fieldset>
 	<input type="submit" value="Submit">
 	</form>
